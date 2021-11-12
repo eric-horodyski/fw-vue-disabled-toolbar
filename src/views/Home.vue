@@ -45,7 +45,7 @@
         <ion-item-divider>
           <ion-label>Button in an ion-item</ion-label>
         </ion-item-divider>
-        <ion-item :color="saveToolbarColor">
+        <ion-item color="dark">
           <ion-button :disabled="isDisabled" @click="handleClick">
             Reset
           </ion-button>
@@ -54,13 +54,14 @@
 
     </ion-content>
     <ion-footer>
-      <ion-toolbar :color="saveToolbarColor">
+      <ion-toolbar color="dark">
         <ion-buttons slot="end">
           <ion-button :disabled="isDisabled" @click="handleClick">
             Reset
           </ion-button>
         </ion-buttons>
       </ion-toolbar>
+      <ion-toolbar></ion-toolbar>
     </ion-footer>
   </ion-page>
 </template>
@@ -94,10 +95,7 @@ export default defineComponent({
         count.value = count.value + 1;
       },
       saveToolbarColor: computed(() => {
-        if (count.value == 0) return "dark";
-        if (count.value == 1) return "warning";
-
-        return "success";
+        return "dark";
       }),
       handleClick: () => {
         count.value = 0;
