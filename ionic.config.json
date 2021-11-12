@@ -1,0 +1,7 @@
+{
+  "name": "fw-vue-disabled-toolbar",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "vue"
+}
